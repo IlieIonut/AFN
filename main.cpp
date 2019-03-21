@@ -143,13 +143,14 @@ int main()
         for(j=0; j<q[i].numar; j++)
             cout<<"catre "<<q[i].t.stare_finala[j]<<" cu literele "<<q[i].t.litera[j]<<endl;
     }
-    if(fc.eof() && q[0].final==1){
-        cout<<"Cuvantul este acceptat";
-        return 0;
-    }else{
-        cout<<"Cuvantul nu este acceptat";
-        return 0;
-    }
+    if(fc.eof())
+        if(q[0].final==1){
+            cout<<"Cuvantul este acceptat";
+            return 0;
+        }else{
+            cout<<"Cuvantul nu este acceptat";
+            return 0;
+        }
     i=0;
     j=0;
     k=0;
